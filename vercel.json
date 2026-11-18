@@ -1,0 +1,19 @@
+{
+  "routes": [
+    {
+      "src": "/Build/(.*)\\.js\\.br",
+      "headers": { "content-encoding": "br", "content-type": "application/javascript" },
+      "dest": "/Build/$1.js.br"
+    },
+    {
+      "src": "/Build/(.*)\\.wasm\\.br",
+      "headers": { "content-encoding": "br", "content-type": "application/wasm" },
+      "dest": "/Build/$1.wasm.br"
+    },
+    {
+      "src": "/Build/(.*)\\.data\\.br",
+      "headers": { "content-encoding": "br", "content-type": "application/octet-stream" },
+      "dest": "/Build/$1.data.br"
+    }
+  ]
+}
