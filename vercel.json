@@ -1,19 +1,25 @@
 {
-  "routes": [
+  "headers": [
     {
-      "src": "/Build/(.*)\\.js\\.br",
-      "headers": { "content-encoding": "br", "content-type": "application/javascript" },
-      "dest": "/Build/$1.js.br"
+      "source": "/Build/(.*\\.js\\.br)",
+      "headers": [
+        { "key": "Content-Encoding", "value": "br" },
+        { "key": "Content-Type", "value": "application/javascript" }
+      ]
     },
     {
-      "src": "/Build/(.*)\\.wasm\\.br",
-      "headers": { "content-encoding": "br", "content-type": "application/wasm" },
-      "dest": "/Build/$1.wasm.br"
+      "source": "/Build/(.*\\.wasm\\.br)",
+      "headers": [
+        { "key": "Content-Encoding", "value": "br" },
+        { "key": "Content-Type", "value": "application/wasm" }
+      ]
     },
     {
-      "src": "/Build/(.*)\\.data\\.br",
-      "headers": { "content-encoding": "br", "content-type": "application/octet-stream" },
-      "dest": "/Build/$1.data.br"
+      "source": "/Build/(.*\\.data\\.br)",
+      "headers": [
+        { "key": "Content-Encoding", "value": "br" },
+        { "key": "Content-Type", "value": "application/octet-stream" }
+      ]
     }
   ]
 }
